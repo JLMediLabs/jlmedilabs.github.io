@@ -32,11 +32,16 @@
                 <div class="col-lg-5">
                     <h1 class="display-5 fw-bold lh-1 mb-3">Revolutionary Early Diagnosis with a Tiny Drop of Blood</h1>
                     <p class="lead py-3">We provide sensitive, quick, and affordable early-diagnosis solutions requireing only a tiny drop of blood by harnessing the cutting-edge single-molecule techniques.</p>
+                    <!--
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <div>
-                            <input type="email" class="form-control form-lg" placeholder="Your e-mail">
+                        <div class="flex-fill">
+                            <input type="email" id="email" class="form-control form-lg" placeholder="Your e-mail">
                         </div>
-                        <button type="button" class="btn btn-lg btn-primary px-4 me-md-2">I'm interested!</button>
+                        <button type="button" class="btn btn-primary px-4 me-md-2 fw-bold" onclick="subscribe()">I'm interested!</button>
+                    </div>
+                    -->
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary px-4 me-md-2 fw-bold" onclick="send_email()">Interested? Contact Us</button>
                     </div>
                 </div>
             </div>
@@ -45,5 +50,13 @@
             <hr>
             <p class="small">© 2021 JLMediLabs, all rights reserved</p>
         </footer>
+        <script>
+            //var subscribe = function () {
+            //    alert(document.getElementById("email").value);
+            //}
+            var send_email = function () {
+                document.location = "mailto:" + atob('ampsZWVAamxtZWRpbGFicy5jb20=');
+            }
+        </script>
     </body>
 </html>
